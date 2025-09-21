@@ -120,3 +120,32 @@
     @apply bg-background text-foreground;
   }
 }
+
+/* Mobile Menu Styles */
+@layer components {
+  .mobile-menu-container {
+    position: relative;
+    z-index: 50;
+  }
+  
+  /* Animation for mobile menu */
+  @keyframes fadeIn {
+    from { opacity: 0; }
+    to { opacity: 1; }
+  }
+  
+  @keyframes slideIn {
+    from { transform: translateX(100%); }
+    to { transform: translateX(0); }
+  }
+  
+  /* Touch-friendly mobile menu interactions */
+  @media (max-width: 768px) {
+    .mobile-menu-active {
+      overflow: hidden;
+      position: fixed;
+      width: 100%;
+      height: 100%;
+    }
+  }
+}
